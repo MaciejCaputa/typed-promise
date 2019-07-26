@@ -1,0 +1,51 @@
+{
+  "name": "typed-promise",
+  "version": "0.0.1",
+  "description": "Strongly typed implementation of promises.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "build": "tsc -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint --project tsconfig.json --config tslint.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+
+  },
+  "keywords": ["promise", "promises", "typescript"],
+  "author": "Maciej Caputa @eduvantage <maciej.caputa.pl@gmail.com> (https://maciejcaputa.com/)",
+  "files": [
+    "lib/**/*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^12.6.8",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {},
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

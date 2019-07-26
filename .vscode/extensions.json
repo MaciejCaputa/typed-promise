@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+      "editorconfig.editorconfig",
+      "ms-vscode.vscode-typescript-tslint-plugin",
+      "esbenp.prettier-vscode",
+      "streetsidesoftware.code-spell-checker",
+      "eamodio.gitlens",
+      "wix.vscode-import-cost",
+      "christian-kohler.path-intellisense"
+  ]
+}
